@@ -6,7 +6,6 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 h1 {
@@ -14,3 +13,8 @@ h1 {
     text-align: center;
 }
 
+div {
+    font-family: sans-serif;
+    font-size: 2rem;
+
+}
