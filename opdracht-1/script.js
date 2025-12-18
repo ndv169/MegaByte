@@ -1,10 +1,21 @@
-function updateCountdown() {
-    const now = new Date();
+const now = new Date();
 
+function getGreeting(date) {
+    const hour = date.getHours();
+    if (hour < 6)  return "Goedenacht";
+    if (hour < 12) return "Goede morgen";
+    if (hour < 18) return "Good middag";
+    return "Goede avond";
+}
+
+function updateCountdown() {
     const nextYear = now.getFullYear() + 1;
     const newYear = new Date(nextYear, 0, 1, 0, 0, 0);
 
     const diff = newYear - now;
+
+    const greeting = getGreeting(now);
+    document.getElementById("greeting").textContent = greeting;
 
     if (diff <= 0) {
         document.getElementById("countdown").textContent = "🎉 Happy New Year!";
@@ -25,3 +36,4 @@ function updateCountdown() {
 
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
+
