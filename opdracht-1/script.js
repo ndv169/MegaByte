@@ -2,7 +2,7 @@ const now = new Date();
 
 function getGreeting(date) {
     const hour = date.getHours();
-    if (hour < 6)  return "Goedenacht";
+    if (hour < 6)  return "Goede nacht";
     if (hour < 12) return "Goede morgen";
     if (hour < 18) return "Good middag";
     return "Goede avond";
